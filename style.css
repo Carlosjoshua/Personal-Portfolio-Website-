@@ -4,16 +4,16 @@ body {
     margin: 0;
     padding: 0;
     color: #3c4043;
-    /* This is the "Dirty White" / Google Drive grey background */
-    background-color: #f1f3f4; 
+    /* This is a very light, professional yellow */
+    background-color: #fffdf0; 
 }
 
-/* Navigation - Clean White */
+/* Navigation - Keeping it clean white or light cream */
 nav {
     background-color: #ffffff; 
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #dadce0;
+    border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
     z-index: 1000;
