@@ -1,87 +1,111 @@
 /* General Styles */
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Google-style font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: #3c4043; /* Google's standard dark grey text */
-    background-color: #f8f9fa; /* Very light grey, like the Drive background */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
 }
 
-/* Navigation - Clean White like the Drive Header */
+/* Navigation */
 nav {
-    background-color: #ffffff; 
-    padding: 15px;
+    background-color: #222;
+    padding: 1rem;
     text-align: center;
-    border-bottom: 1px solid #dadce0; /* Subtle border line */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
-    color: #5f6368;
-    margin: 0 15px;
+    color: white;
     text-decoration: none;
-    font-weight: 500;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-nav a:hover {
-    color: #1a73e8; /* Google Blue on hover */
+nav a.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
 
-/* Hero Section - Light and Airy */
+/* Hero Section */
 .hero {
-    padding: 80px 20px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x800');
+    background-size: cover;
+    color: white;
     text-align: center;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dadce0;
 }
 
-.hero h1 {
-    color: #202124;
-    font-size: 2.5rem;
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-/* The Main Content Box */
-.content, section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #ffffff; 
-    border: 1px solid #dadce0;
+/* Content Container */
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
     border-radius: 8px;
 }
 
-/* Project Cards - Styled like Drive Folders/Files */
+/* RESPONSIVE GRID GALLERY */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+    margin-top: 20px;
 }
 
 .project-card {
-    background: #ffffff;
-    border: 1px solid #dadce0;
+    background: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
-    transition: background-color 0.2s;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-    background-color: #f1f3f4; /* Subtle highlight on hover */
+    transform: translateY(-5px);
 }
 
-/* Button - Using Google Blue */
-.btn {
-    background-color: #1a73e8; /* Official Google Blue */
-    color: white;
-    padding: 10px 24px;
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3, .project-card p {
+    padding: 10px 15px;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 500;
-    border: none;
-    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
-}
-
-.btn:hover {
-    background-color: #185abc;
-    box-shadow: 0 1px 3px rgba(60,64,67,0.4);
 }
