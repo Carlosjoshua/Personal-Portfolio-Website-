@@ -5,12 +5,12 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #e62828;
 }
 
 /* Navigation */
 nav {
-    background-color: #222;
+    background-color: #f8bf14;
     padding: 1rem;
     text-align: center;
     position: sticky;
